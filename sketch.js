@@ -93,7 +93,7 @@ function setDistanceToEnd(){
     for(let i = 0; i < nodes.length; i++){
         for(let j = 0; j < nodes[i].length; j++){
             //Manhattan distance
-            nodes[i][j].distanceToEnd = 2*(Math.abs(i-getEndNode().y) + Math.abs(j-getEndNode().x));
+            nodes[i][j].distanceToEnd = 1.5*(Math.abs(i-getEndNode().y) + Math.abs(j-getEndNode().x));
         }
     }
 }
@@ -173,7 +173,7 @@ class Node{
         this.isEnd = false;
         this.isVisited = false;
         this.distanceToEnd = 100;
-        this.cost = 10;
+        this.cost = 5;
         this.neighbours = [];
         this.cameFrom = null;
         this.isInQueue = false;
